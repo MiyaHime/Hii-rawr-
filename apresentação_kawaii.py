@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import time
 try:
     from colorama import init, Fore, Style
@@ -48,3 +49,4 @@ if __name__ == "__main__":
     # Coloque seu nome ou apelido kawaii aqui! 🍓
     meu_nome_kawaii = "TechSenpai" 
     apresentar_kawaii(MiyaHime=meu_nome_kawaii)
+
