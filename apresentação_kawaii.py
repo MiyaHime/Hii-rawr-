@@ -1,4 +1,5 @@
 import time
+import textwrap
 try:
     from colorama import init, Fore, Style
     init(autoreset=True)
@@ -10,18 +11,19 @@ try:
     RESET = Style.RESET_ALL
 except ImportError:
     # Cores padrão se colorama não estiver instalado
-    ROSA = ""
-    CIANO = ""
-    AMARELO = ""
-    BRANCO = ""
-    RESET = ""
+    ROSA = "\033[95m"
+    CIANO = "\033[96m"
+    AMARELO = "\033[93m"
+    BRANCO = "\033[97m"
+    RESET = "\033[0m"
 
 def apresentar_kawaii(MiyaHime):
     """
     Função de apresentação super kawaii para o GitHub! 🌸
     """
     borda = f"{ROSA}*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*{RESET}"
-    
+    bordac = f"{CIANO}✼═══════ •❅• ═══════ ✼✿             ✿✻ ═══════ •❅• ═══════✼{RESET}"
+
     print(f"\n{borda}")
     titulo = f"💖🎀🌸 Kawaii Welcome! Nya! 🌸🎀💖"
     print(titulo.center(55))
@@ -42,6 +44,26 @@ def apresentar_kawaii(MiyaHime):
     time.sleep(0.5)
     print(f"{ROSA}🌸 Espero que goste do que vê! Tenha um dia doce! 🍬{RESET}")
     
+    print(f"\n{borda}")
+    print(f"\n{bordac}")
+
+    LARGURA_TOTAL = 80
+    arte_coelho = f"""
+(\_/)
+(^.^)
+(>♥<)z"""
+    arte_coelho = textwrap.dedent(arte_coelho).strip()
+
+    linhas = arte_coelho.split('\n')
+    num_linhas = len(linhas)
+
+    for i, linha in enumerate(linhas):
+       linha_centralizada = linha.center(60)
+       print(linha_centralizada)
+       time.sleep(1.0)
+    print (RESET, end="")
+
+    print(f"\n{bordac}")
     print(f"\n{borda}")
 
 if __name__ == "__main__":
