@@ -14,7 +14,7 @@ Este repositório contém um script Python (`apresentacao_kawaii.py`) que eu uso
 
 1.  **Clone o repositório:**
     ```bash
-    git clone github.com
+    git clone github.com/MiyaHime/Hii-rawr-.git
     ```
 
 2.  **Entre na pastinha:**
